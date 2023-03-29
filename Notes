@@ -1,0 +1,121 @@
+
+Page
+1
+of 5
+************git class 06*********************
+------Branches--------
+we need branches to void conflicts in every commit
+we need branches not to mess up the main branch.
+----------------------------------------------------------
+Sceanrio:
+A company wants to develope a solar system.
+Requirements:
+Develope a solar System basic operational model and deploy it.
+Anna:
+Appraoch :
+1. write the code
+2. Test it and commit it in the local repo
+3. Push the code to github
+--------------------------------------------------
+git branch -M main-----> to rename your branch to main.
+----------------DONE-----------------------------------
+Requirement 2:
+Addtion of feature:
+please add the feature sun in the solar system
+it should have the color, temperature , radius of the sun added.
+once the task is done and tested please merge it to the "main" on your
+local and then update the github branch.
+Dana:
+Appraoch:
+1. clone it
+2. open in intellij
+3. create a new branch out of main
+4. add the feature and test it
+5. merge your branch to main on local
+6. update the remote
+-----------------------------------------------
+check if your branch is upto date with the github.
+git fetch---> checks if there is any update on the gihtub in any branch
+if there is an update it will tell u the branch name in which there is an
+update
+if there is no update it will simply output nothing.
+git fetch doesnt pull/updates the code --> it just checks
+in order to pull the update ---> git pull.
+* git branch --> tells u ur current branch.
+git branch branchName --> to create a new branch
+git checkout branchName --> to switch to the branch.
+---------------------------------------
+while working on feature sun, Dana has an error in the code.
+now in order to solve this error she doesnt want to mess up other features
+that are working fine.
+so what should she do in order to preserve what is working fine and then
+work on issue.
+solution:
+create a separate branch and resolve the issue in that branch.
+1. make sure the right branch is there
+commit on it
+When u have fixed the issue in the branch that u created:
+In order to merge after u have made the fix :
+1. Switch to the branch you want to merge to
+2. use the command git merge branchName --> wehre branchName is the
+the name of the branch u want to merge
+--------------------------------------------------------------------------
+--------
+revision:
+u have a project , solar system , that has the basic setup.
+you want to work on it and want to add a feature sun.
+write down the steps in details.
+1. clone --> git clone url
+2. open the terminal in the location of the repository --> confirm the
+location. (by default ur termial is always on folder)
+3. create a new branch --> git branch branchName
+4. git checkout branchName ---> you are switched to that branch.
+make the changes in the intellij, i.e add the code, test it,
+once the project is tested and you are sure that it is working completeley
+fine.you can make mulitple commits while working
+on this branch.
+Once feature is complete and is tested by you and you want to merge it to
+the parent branch.
+5. first goto parent branch--->git checkout parentBranch
+6. merge the child branch into parent -- > git merge childBranch.
+Notes/warnings:
+whenever you want to switch a branch
+make sure of following :
+1. before switching branch make sure what is your current branch --> git
+branch (the one with * is the current branch)
+2. before creating a branch make sure u are on the branch from which u
+wanna create (git branch)
+3. before merging make sure that you are on the parent branch (git
+branch)
+4. whenever u are swithcing branch make sure there is no change that is
+not commited on that branch.---> very improtant......
+WHENEVER U ARE IN A BRANCH --> GIT WORKS THE EXACT SAME WAY IT USED TO
+WORK BEFORE.
+---------------------------------------------
+PULL REQUEST ----> GITHUB
+WHENEVER YOU WORK ON A BRANCH THAT NEEDS TO BE INTEGRATED TO THE MAIN
+USUALLY THE CODE IS FIRST REVIEWED BY YOUR TEAM LEAD AND THEN HE
+MIGHT ASK YOU TO
+MERGE IT ON
+*THE LOCAL
+OR ON
+*THE REMOTE.
+in local u mergeby this appraoch:
+1. first goto parent branch--->git checkout parentBranch
+2. merge the child branch into parent -- > git merge childBranch.
+on remote :
+1. u open up a pull request to let your team lead know that u have
+updated the code.
+* click on pull request
+* new pull request
+* select the base (branch to which u want to merge)
+* select the compare(branch which u want to merge)
+* create pull request
+* u add comments , assigniess
+* create pull request
+------------
+how to resolve a pull request. must be only done by the team lead....
+in order to sync your branch with github
+1. make sure u are in the branch u want to update
+2. git fetch to check if therer is update
+3. git pull.
